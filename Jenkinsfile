@@ -15,7 +15,7 @@ pipeline {
         }
         stage('READ') {
             steps {
-                bat 'cat build_number'
+                bat 'more build_number'
             }
         }
     }
