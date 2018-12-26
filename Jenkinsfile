@@ -5,17 +5,17 @@ pipeline {
     stages {
         stage('PRINT') {
             steps {
-                bat 'echo $JOB_NAME'
+                sh 'echo $JOB_NAME'
             }
         }
         stage('WRITE') {
             steps {
-                bat 'echo $BUILD_NUMBER >> build_number'
+                sh 'echo $BUILD_NUMBER >> build_number'
             }
         }
         stage('READ') {
             steps {
-                bat 'more build_number'
+                sh 'cat build_number'
             }
         }
     }
